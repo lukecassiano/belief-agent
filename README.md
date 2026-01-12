@@ -1,8 +1,6 @@
 # belief-agent
 An explicit uncertainty-aware cognitive agent that models latent belief states and performs inference given incomplete information. 
 
-When AI components communicate under uncertainty, naive information sharing can make systems worse. 
-This repository explores and studies when communication helps—and when it causes cascading failure.
 
 ## Project Structure
 
