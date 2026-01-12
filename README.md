@@ -119,7 +119,8 @@ Unidirectional Communication:
 <img width="441" height="473" alt="unidirectionalgrid" src="https://github.com/user-attachments/assets/220ed7bf-fc99-406c-b10d-9f861087a331" />
 
 
-This presents an immediate visual representation of belief collapse, recovery, and herding dynamics immediately visible. Agents will literally move toward hypotheses as confidence increases, regardless of accuracy.
+
+This offers an immediate visual representation of belief collapse, recovery, and herding dynamics. Agents will literally move toward hypotheses as confidence increases, regardless of accuracy.
 
 ### What is Demonstrated by this?
 
