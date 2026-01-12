@@ -100,13 +100,19 @@ To mitigate this issues, I implemented:
 ***Here are three test cases labeled by communication mode. Each case shows the movement (tracked by a colored trail) of each agent, as they converge upon a final goal.***
 
 No Communication:
+
 <img width="441" height="476" alt="nocommgrid" src="https://github.com/user-attachments/assets/8d983fb6-1a2b-4b0d-b173-73780ae6e384" />
 
+
 Bidirectional Communication:
+
 <img width="478" height="510" alt="bidirectionalgrid" src="https://github.com/user-attachments/assets/86b82af7-6020-4260-bb9f-b68a17d03069" />
 
+
 Unidirectional Communication:
+
 <img width="441" height="473" alt="unidirectionalgrid" src="https://github.com/user-attachments/assets/220ed7bf-fc99-406c-b10d-9f861087a331" />
+
 
 This presents an immediate visual representation of belief collapse, recovery, and herding dynamics immediately visible. Agents will literally move toward hypotheses as confidence increases, regardless of accuracy.
 
@@ -124,8 +130,6 @@ This presents an immediate visual representation of belief collapse, recovery, a
 ```bash
 pip install -r requirements.txt
 python -m streamlit run app.py
-
-
 
 *Further details, results, and analysis are documented inline in code and experiment logs.
 A full README will be written once all branches are complete.*
