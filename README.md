@@ -2,7 +2,7 @@
 An explicit uncertainty-aware cognitive agent that models latent belief states and performs inference given incomplete information. 
 
 
-<img style="width:40%; height:auto;" alt="bidirectionalgrid" src="https://github.com/user-attachments/assets/86b82af7-6020-4260-bb9f-b68a17d03069" /> <img style="width:40%; height:auto;" alt="agreementnoisesweep" src="https://github.com/user-attachments/assets/5154f848-4189-4b75-b719-f55fa449150a" />
+<img style="width:40%; height:auto;" alt="bidirectionalgrid" src="https://github.com/user-attachments/assets/86b82af7-6020-4260-bb9f-b68a17d03069" /> <img style="width:60%; height:auto;" alt="agreementnoisesweep" src="https://github.com/user-attachments/assets/5154f848-4189-4b75-b719-f55fa449150a" />
 
 
 ## About
