@@ -11,7 +11,6 @@ GOAL_POS = {
 }
 
 def belief_to_xy(belief):
-    # belief is np.array([pA, pB, pC])
     Ax, Ay = GOAL_POS["A"]
     Bx, By = GOAL_POS["B"]
     Cx, Cy = GOAL_POS["C"]
@@ -23,18 +22,18 @@ def belief_to_xy(belief):
 def draw_grid_frame(step, trail_S, trail_L):
     fig, ax = plt.subplots(figsize=(5.5, 5.5))
 
-    # Draw "grid" (light reference)
+    # draw grid
     ax.set_xlim(-1.4, 1.4)
     ax.set_ylim(-1.4, 1.4)
     ax.set_aspect("equal", adjustable="box")
     ax.grid(True, alpha=0.25)
 
-    # Plot goals
+    # plot goals
     for g, (x, y) in GOAL_POS.items():
         ax.scatter([x], [y], s=200)
         ax.text(x, y + 0.08, g, ha="center", va="bottom", fontsize=14)
 
-    # Trails
+    # trails
     if len(trail_S) > 1:
         xs, ys = zip(*trail_S)
         ax.plot(xs, ys, linewidth=2, alpha=0.8)
@@ -42,16 +41,15 @@ def draw_grid_frame(step, trail_S, trail_L):
         xl, yl = zip(*trail_L)
         ax.plot(xl, yl, linewidth=2, alpha=0.8)
 
-    # Current positions
+    # current pos
     sx, sy = trail_S[-1]
     lx, ly = trail_L[-1]
     ax.scatter([sx], [sy], s=160, marker="o", label="Sensor")
     ax.scatter([lx], [ly], s=160, marker="s", label="Language")
 
-    # Title / annotations
     ax.set_title(f"t={step['t']} | true={['A','B','C'][step['true_goal']]} | obs={['A','B','C'][step['obs']]}")
 
-    # Put messages under plot
+    # msgs
     msg = f"S msg: {step['S_msg']} | L msg: {step['L_msg']} | clue: {step['clue']}"
     ax.text(0.5, -0.10, msg, transform=ax.transAxes, ha="center", va="top", fontsize=9)
 
@@ -72,7 +70,6 @@ st.title("Uncertainty-Aware Multi-Agent Inference — Branch A UI")
 
 
 
-# ---------------- Sidebar controls ----------------
 with st.sidebar:
     st.header("Controls")
     noise = st.slider("Noise", 0.0, 0.6, 0.30, 0.05)
@@ -264,4 +261,5 @@ with tab2:
         st.divider()
         st.subheader("Sweep table")
         st.dataframe(df.sort_values(["noise", "mode"]), use_container_width=True)
+
 
